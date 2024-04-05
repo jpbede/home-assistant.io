@@ -46,6 +46,10 @@ To change the settings, go to {% my integrations title="**Settings** > **Devices
 - **Ping count**: Number of echo requests to send to the target. The default is 5.
 - **Consider home**: Number of seconds that must elapse before considering a disconnected device "not at home". The default is 180 seconds (3 minutes).
 
+<div class='note'>
+  Please keep in mind when increasing the ping count that the start-up time of the integration and Home Assistant will increase.
+</div>
+
 ## Binary sensor
 
 The `ping` binary sensor platform allows you to use `ping` to send ICMP echo requests. This way you can check if a given host is online and determine the round trip times from your Home Assistant instance to that system.
