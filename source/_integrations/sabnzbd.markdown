@@ -49,8 +49,8 @@ This integration will create these sensors:
 
 This integration will create two buttons:
 
-- `Pause`: Pause the download queue.
-- `Resume`: Resume the download queue.
+- Pause the download queue.
+- Resume the download queue.
 
 ## Actions
 
