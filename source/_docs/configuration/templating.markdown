@@ -517,6 +517,7 @@ The same thing can also be expressed as a test:
 - `areas()` returns the full list of area IDs
 - `area_id(lookup_value)` returns the area ID for a given device ID, entity ID, or area name. Can also be used as a filter.
 - `area_name(lookup_value)` returns the area name for a given device ID, entity ID, or area ID. Can also be used as a filter.
+- `area_attr(area_name_or_id, attribute_name)` will return the value of the attribute or None if it doesn't exist.
 - `area_entities(area_name_or_id)` returns the list of entity IDs tied to a given area ID or name. Can also be used as a filter.
 - `area_devices(area_name_or_id)` returns the list of device IDs tied to a given area ID or name. Can also be used as a filter.
 
@@ -558,6 +559,14 @@ The same thing can also be expressed as a test:
 
 ```text
 {{ area_devices('Living Room') }}  # ['my_device_id']
+```
+
+```text
+{{ area_attr('Living Room', 'temperature_entity_id') }}  # 'sensor.living_room_temperature'
+```
+
+```text
+{{ area_attr('Living Room', 'humidity_entity_id') }}  # 'sensor.living_room_humidity'
 ```
 
 {% endraw %}
